@@ -16,12 +16,14 @@ public class Picture
     private Square window;
     private Triangle roof;
     private Circle sun;
+    private Circle sun2;
 
     /**
      * Constructor for objects of class Picture
      */
     public Picture()
     {
+        this.draw()
         // nothing to do... instance variables are automatically set to null
     }
 
@@ -53,6 +55,14 @@ public class Picture
         sun.moveVertical(-10);
         sun.changeSize(60);
         sun.makeVisible();
+        
+        sun2 = new Circle();
+        sun2.changeColor("red");
+        sun2.moveHorizontal(200);
+        sun2.moveVertical(-20);
+        sun2.changeSize(60);
+        sun2.makeVisible();
+        sun2.slowMoveVertical(200);
     }
 
     /**
